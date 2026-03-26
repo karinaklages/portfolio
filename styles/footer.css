@@ -1,0 +1,88 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: var(--farbe-black);
+    clip-path: polygon(0 0%, 100% 30%, 100% 100%, 0% 100%);
+    padding-top: 200px;
+    margin-top: auto;
+    height: 300px;
+    padding-bottom: 50px;
+}
+
+.social-media-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: first baseline;
+    gap: 20px;
+    padding-right: 30px;
+}
+
+.social-media-icon img {
+    width: 40px;
+}
+
+.social-media-icon img:hover {
+    transform: translateY(-15px);
+    transition: transform 0.3s ease;
+}
+
+.link-area {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    margin-right: 4px;
+}
+
+.footer-left img {
+    width: 90px;
+    padding-left: 30px;
+}
+
+.copywrite {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--farbe-cream);
+    padding-left: 30px;
+}
+
+.footer-links {
+    position: relative;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: var(--farbe-cream);
+    text-decoration: none;
+    padding-right: 30px;
+}
+
+.footer-links:visited {
+    color: var(--farbe-cream);
+}
+
+.footer-links::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--farbe-lilac);
+    transition: width 0.3s ease;
+}
+
+.footer-links:hover::after {
+    width: 45%;
+}
+
+.footer-links:hover {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    color: var(--farbe-cream);
+}

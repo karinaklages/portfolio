@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-family: 'Overpass';
+  font-style: normal;
+  text-decoration: none;
+}
+
+.d-none {
+  display: none !important;
+}
