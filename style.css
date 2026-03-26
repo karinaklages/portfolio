@@ -2,7 +2,7 @@
   --farbe-black: #000000;
   --farbe-white: #ffffff;
   --farbe-cream: #fffcf3;
-  --farbe-lilac: #dda6ff;
+  --farbe-lilac: #d8a1fb;
 }
 
 body {
@@ -30,6 +30,7 @@ h2 {
     font-size: 78px;
     letter-spacing: 1%;
     color: var(--farbe-black);
+    margin-bottom: 50px;
 }
 
 h2:hover {
@@ -57,7 +58,7 @@ p {
     font-family: 'Overpass';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 120%;
     color: var(--farbe-black);
 }
@@ -103,11 +104,94 @@ header img {
 
 .subhead-line {
     border: none;
-    border-top: 3px solid var(--farbe-black);
+    border-top: 4px solid var(--farbe-black);
     width: 600px;
     margin: 0;
 }
 
 main {
   flex: 1;
+}
+
+.section-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.section-subhead {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--farbe-black);
+    padding-bottom: 48px;
+    max-width: 630px;
+    text-align: center;
+}
+
+.about-me,
+.my-skills,
+.portfolio,
+.references {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.references-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.references-container {
+    padding: 42px 26px;
+    border: 4px solid var(--farbe-black);
+}
+
+.reference-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reference-head img {
+    width: 32px;
+    padding-bottom: 22px;
+}
+
+.reference-name {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--farbe-black);
+    padding-bottom: 8px;
+}
+
+.reference-title {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--farbe-black);
+    padding-bottom: 28px;
+}
+
+.references-container:hover {
+    padding: 42px 26px;
+    border: 4px solid var(--farbe-lilac);
+}
+
+.references-container:hover .reference-head img {
+    filter: invert(76%) sepia(46%) saturate(1507%) hue-rotate(204deg) brightness(94%) contrast(109%);
 }
