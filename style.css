@@ -10,6 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--farbe-cream);
+    background-image: radial-gradient(circle, #e7e0cc 2px, transparent 2px);
+    background-size: 110px 110px;
 }
 
 h1 {
@@ -71,6 +73,11 @@ header {
     height: 92px;
     background-color: var(--farbe-cream);
     padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 header img {
