@@ -16,8 +16,8 @@ body {
 
 .gradient-ball {
     position: fixed;
-    width: 900px;
-    height: 900px;
+    width: 1000px;
+    height: 1000px;
     border-radius: 50%;
     background: radial-gradient(circle, #d8a1fb 0%, transparent 65%);
     filter: blur(60px);
@@ -46,6 +46,7 @@ h2 {
     font-size: 78px;
     letter-spacing: 1%;
     color: var(--farbe-black);
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 
@@ -163,7 +164,61 @@ main {
     justify-content: center;
     align-items: center;
 }
- 
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 80px 120px;
+    margin-top: 80px;
+}
+
+.skills-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Logo icon hovers like link image in footer  */
+
+/* .skills-card img {
+    width: 56px;
+} */
+
+/* .skills-card:hover img {
+    transform: translateY(-15px);
+} */
+
+.skills-card:hover span {
+    color: var(--farbe-lilac);
+}
+
+.skills-card img {
+    width: 56px;
+    transition: transform 1.2s ease;
+}
+
+.skills-card:hover img {
+    transform: rotateY(360deg);
+}
+
+.skills-card span {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--farbe-black);
+}
+
+.skills-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
 .references-area {
     display: flex;
     flex-direction: row;

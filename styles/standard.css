@@ -9,6 +9,13 @@ a {
   font-family: 'Overpass';
   font-style: normal;
   text-decoration: none;
+  color: var(--farbe-lilac);
+}
+
+a:hover {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 700;
 }
 
 .d-none {

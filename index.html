@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/footer.css">
     <title>Karina Klages</title>
 </head>
-<body>
+<body onload="init">
     <div class="gradient-ball"></div>
     <header>
         <a href="index.html">
@@ -39,7 +39,9 @@
         </section>
         <section class="my-skills section-area">
             <h2>My Skills</h2>
-            <div>
+            <ul class="skills-grid" id="skillsGrid"></ul>
+        <div class="skills-information">
+                <p>You don't see the skill you need? <a href="mailto:karina.klages@web.de">Contact me.</a> I'm always ready to learn!</p>
             </div>
         </section>
         <section class="portfolio section-area">
@@ -95,6 +97,7 @@
         </div>
     </footer>
 
+    <script src="./assets/scripts/templates.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
