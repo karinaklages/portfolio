@@ -1,7 +1,7 @@
 
 .skills-outline {
     margin-top: 100px;
-    padding: 80px 130px;
+    padding: 80px 120px;
     position: relative;
 }
 
@@ -10,6 +10,7 @@
     content: '';
     position: absolute;
     inset: 0;
+    top: 4px;
     border: 4px solid var(--farbe-black);
     border-top: none;
     pointer-events: none;
@@ -42,16 +43,17 @@
     margin: 0;
     padding: 0 20px;
     z-index: 1;
+    white-space: nowrap;
 }
 
 .skills-outline {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 80px 120px;
+    gap: 80px 110px;
     margin-top: 80px;
 }
 

@@ -1,7 +1,4 @@
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     background-color: var(--farbe-black);
     clip-path: polygon(0 0%, 100% 30%, 100% 100%, 0% 100%);
     padding-top: 200px;
@@ -10,12 +7,20 @@ footer {
     padding-bottom: 50px;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .social-media-icon {
     display: flex;
     justify-content: flex-end;
     align-items: first baseline;
     gap: 20px;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
 .social-media-icon img {
@@ -35,8 +40,8 @@ footer {
 }
 
 .footer-left img {
-    width: 90px;
-    padding-left: 30px;
+    width: 85px;
+    padding-left: 20px;
 }
 
 .copywrite {
@@ -45,7 +50,7 @@ footer {
     font-weight: 400;
     font-size: 16px;
     color: var(--farbe-cream);
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 .footer-links {
@@ -58,7 +63,7 @@ footer {
     letter-spacing: 0%;
     color: var(--farbe-cream);
     text-decoration: none;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
 .footer-links:visited {
