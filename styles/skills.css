@@ -1,0 +1,103 @@
+
+.skills-outline {
+    margin-top: 100px;
+    padding: 80px 130px;
+    position: relative;
+}
+
+/* Left, right and bottom line */
+.skills-outline::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 4px solid var(--farbe-black);
+    border-top: none;
+    pointer-events: none;
+}
+
+/* Top line */
+.skills-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        var(--farbe-black) calc(50% - 300px),
+        transparent calc(50% - 300px),
+        transparent calc(50% + 300px),
+        var(--farbe-black) calc(50% + 300px)
+    );
+    pointer-events: none;
+}
+
+.my-skills h2 {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.skills-outline {
+    padding-top: 80px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 80px 120px;
+    margin-top: 80px;
+}
+
+.skills-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Logo icon hovers like link image in footer  */
+
+/* .skills-card img {
+    width: 56px;
+} */
+
+/* .skills-card:hover img {
+    transform: translateY(-15px);
+} */
+
+.skills-card:hover span {
+    color: var(--farbe-lilac);
+}
+
+.skills-card img {
+    width: 56px;
+    transition: transform 1.2s ease;
+}
+
+.skills-card:hover img {
+    transform: rotateY(360deg);
+}
+
+.skills-card span {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--farbe-black);
+}
+
+.skills-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
