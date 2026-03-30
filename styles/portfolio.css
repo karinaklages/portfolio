@@ -1,0 +1,81 @@
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.project-images {
+    display: flex;
+    width: 50%;
+}
+
+.project-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.project-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details p {
+    width: 95%;
+}
+
+.project-headline {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    color: var(--farbe-black);
+    text-align: left; 
+    line-height: 100%;
+    padding-bottom: 20px;
+}
+
+.project-subhead {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    color: var(--farbe-black);
+    text-align: left; 
+    line-height: 120%;
+    padding-bottom: 24px;
+    color: var(--farbe-lilac);
+}
+
+.button-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 28%;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.button-area button {
+    margin-top: -20px;
+    width: 100%;
+    transition: width 0.3s ease, font-weight 0.3s ease;
+    padding: 16px 55px;
+}
+
+.button-area button:hover {
+    width: 115%;
+    font-weight: 700;
+    padding: 16px 55px;
+}
