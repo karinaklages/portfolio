@@ -1,3 +1,8 @@
+/**
+ * Renders the HTML template for the skills section.
+ * Iterates over the global 'skills' array and creates a list item for each skill.
+ * @returns {string} HTML string for the skills list
+ */
 function renderSkillsTemplate() {
     return skills.map(skill => `
         <li class="skills-card">
@@ -7,6 +12,12 @@ function renderSkillsTemplate() {
     `).join('');
 }
 
+
+/**
+ * Renders the English footer HTML template.
+ * Contains logo, copyright, social media, and legal links.
+ * @returns {string} HTML string for the English footer
+ */
 function renderEnFooterTemplate () {
     return `
         <div class="footer-container">
@@ -37,6 +48,12 @@ function renderEnFooterTemplate () {
     `;
 }
 
+
+// /**
+//  * Renders the German footer HTML template.
+//  * Contains logo, copyright, social media, and legal links.
+//  * @returns {string} HTML string for the German footer
+//  */
 // function renderDeFooterTemplate () {
 //     return `
 //         <div class="footer-container">
