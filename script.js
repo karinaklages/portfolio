@@ -1,5 +1,17 @@
 // Variables
 
+const projectImages = {
+    projectOne:   ["join-1.jpg", "join-2.jpg", "join-3.jpg", "join-4.jpg", "join-5.jpg"],
+    projectTwo:   ["platformer-1.jpg", "platformer-2.jpg", "platformer-3.jpg"],
+    projectThree: ["pokedex-1.jpg", "pokedex-2.jpg", "pokedex-3.jpg", "pokedex-4.jpg", "pokedex-5.jpg"]
+};
+
+const currentIndex = {
+    projectOne:   0,
+    projectTwo:   0,
+    projectThree: 0
+};
+
 const skills = [
     { name: "Mac OS", icon: "./assets/icons/apple.svg" },
     { name: "InDesign", icon: "./assets/icons/indesign.svg" },
@@ -49,3 +61,17 @@ function renderEnFooter() {
     const footer = document.getElementById('footerEn');
     footer.innerHTML = renderEnFooterTemplate();
 }
+
+function changeImage(projectId, direction) {
+    const images = projectImages[projectId];
+    currentIndex[projectId] = (currentIndex[projectId] + direction + images.length) % images.length;
+    
+    const img = document.querySelector(`#${projectId} img`);
+    img.src = `./assets/img/${images[currentIndex[projectId]]}`;
+}
+
+document.querySelectorAll(".project-navigation").forEach(btn => {
+    btn.addEventListener("click", () => {
+        changeImage(btn.dataset.project, parseInt(btn.dataset.dir));
+    });
+});
