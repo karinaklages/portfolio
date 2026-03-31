@@ -1,26 +1,26 @@
 // Variables
 
 const skills = [
-    { name: "Mac OS", icon: "./assets/img/apple.svg" },
-    { name: "InDesign", icon: "./assets/img/indesign.svg" },
-    { name: "Illustrator", icon: "./assets/img/illustrator.svg" },
-    { name: "Photoshop", icon: "./assets/img/photoshop.svg" },
-    { name: "Lightroom", icon: "./assets/img/lightroom.svg" },
-    { name: "XD", icon: "./assets/img/xd.svg" },
-    { name: "Figma", icon: "./assets/img/figma.svg" },
-    { name: "HTML", icon: "./assets/img/html.svg" },
-    { name: "CSS", icon: "./assets/img/css.svg" },
-    { name: "JavaScript", icon: "./assets/img/javascript.svg" },
-    // { name: "Angular", icon: "./assets/img/angular.svg" },
-    // { name: "TypeScript", icon: "./assets/img/typescript.svg" },
-    { name: "Bootstrap", icon: "./assets/img/bootstrap.svg" },
-    // { name: "Wordpress", icon: "./assets/img/wordpress.svg" },
-    { name: "VS Code", icon: "./assets/img/vscode.svg" },
-    { name: "Git", icon: "./assets/img/git.svg" },
-    { name: "Github", icon: "./assets/img/github.svg" },
-    { name: "Firebase", icon: "./assets/img/firebase.svg" },
-    { name: "Rest-API", icon: "./assets/img/api.svg" },
-    { name: "Scrum", icon: "./assets/img/scrum.svg" }
+    { name: "Mac OS", icon: "./assets/icons/apple.svg" },
+    { name: "InDesign", icon: "./assets/icons/indesign.svg" },
+    { name: "Illustrator", icon: "./assets/icons/illustrator.svg" },
+    { name: "Photoshop", icon: "./assets/icons/photoshop.svg" },
+    { name: "Lightroom", icon: "./assets/icons/lightroom.svg" },
+    { name: "XD", icon: "./assets/icons/xd.svg" },
+    { name: "Figma", icon: "./assets/icons/figma.svg" },
+    { name: "HTML", icon: "./assets/icons/html.svg" },
+    { name: "CSS", icon: "./assets/icons/css.svg" },
+    { name: "JavaScript", icon: "./assets/icons/javascript.svg" },
+    // { name: "Angular", icon: "./assets/icons/angular.svg" },
+    // { name: "TypeScript", icon: "./assets/icons/typescript.svg" },
+    { name: "Bootstrap", icon: "./assets/icons/bootstrap.svg" },
+    // { name: "Wordpress", icon: "./assets/icons/wordpress.svg" },
+    { name: "VS Code", icon: "./assets/icons/vscode.svg" },
+    { name: "Git", icon: "./assets/icons/git.svg" },
+    { name: "Github", icon: "./assets/icons/github.svg" },
+    { name: "Firebase", icon: "./assets/icons/firebase.svg" },
+    { name: "Rest-API", icon: "./assets/icons/api.svg" },
+    { name: "Scrum", icon: "./assets/icons/scrum.svg" }
 ];
 
 const ball = document.querySelector('.gradient-ball');
