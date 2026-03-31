@@ -24,6 +24,11 @@
     align-items: flex-start;
 }
 
+.project-wrapper-even .project-images::after {
+    left: -20px;
+    right: 20px;
+}
+
 .project-images {
     position: relative;
     display: inline-block;
