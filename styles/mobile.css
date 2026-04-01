@@ -80,6 +80,10 @@
         font-size: 36px;
     }
 
+    h4 {
+        font-size: 38px;
+    }
+
     .about-left,
     .about-right {
         width: 100%;
@@ -103,8 +107,28 @@
     .skills-information p {
         text-align: center;
     }
+
+    .text-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 60px 20px 20px 20px;
+    }
 }
 
 @media (max-width: 700px) {
 
+}
+
+@media (max-width: 410px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 34px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
 }

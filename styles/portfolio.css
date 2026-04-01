@@ -97,7 +97,7 @@
     transition: transform 0.1s ease;
 }
 
-.project-navigation:active {
+.project-navigation:active{
     transform: none;
     box-shadow: none;
     background: none;

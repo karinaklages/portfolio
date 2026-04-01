@@ -1,0 +1,9 @@
+.background {
+    background-color: var(--farbe-white);
+}
+
+.text-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 100px 100px 100px;
+}

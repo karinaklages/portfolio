@@ -71,6 +71,16 @@ h4 {
     color: var(--farbe-black);
 }
 
+h5 {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -2.5%;
+    color: var(--farbe-lilac);
+    margin-bottom: 16px;
+}
+
 p {
     font-family: 'Overpass';
     font-style: normal;
