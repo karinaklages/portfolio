@@ -4,9 +4,9 @@
  * @returns {string} HTML string for the skills list
  */
 function renderSkillsTemplate() {
-    return skills.map(skill => `
-        <li class="skills-card">
-            <img src="${skill.icon}" alt="${skill.name} Icon">
+    return skills.map((skill, index) => `
+        <li class="skill-item" tabindex="${index + 1}">
+            <img src="${skill.icon}" alt="${skill.alt}">
             <span>${skill.name}</span>
         </li>
     `).join('');
