@@ -5,7 +5,7 @@
  */
 function renderSkillsTemplate() {
     return skills.map((skill, index) => `
-        <li class="skill-item" tabindex="${index + 1}">
+        <li class="skills-card" tabindex="${index + 1}">
             <img src="${skill.icon}" alt="${skill.alt}">
             <span>${skill.name}</span>
         </li>
