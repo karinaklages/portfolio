@@ -196,3 +196,38 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+.scroll-down-left-arrow {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.scroll-down-right-arrow {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.scroll-down-left-arrow img,
+.scroll-down-right-arrow img {
+    transition: transform 0.4s ease;
+}
+
+.scroll-down-left-arrow.moved img {
+    transform: translate(-50px, 50px);
+}
+
+.scroll-down-right-arrow.moved img {
+    transform: translate(50px, 50px);
+}
+
+.scroll-down-left-arrow:hover img {
+    transform: translate(-50px, 50px);
+}
+
+.scroll-down-right-arrow:hover img {
+    transform: translate(50px, 50px);
+}

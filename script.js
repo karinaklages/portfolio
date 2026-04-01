@@ -93,6 +93,25 @@ function renderFooter() {
     footer.innerHTML = renderFooterTemplate();
 }
 
+/**
+ * Adds the 'moved' class to the left scroll-down arrow when the mouse enters it.
+ */
+document.querySelectorAll('.scroll-down-left-arrow').forEach(function (arrow) {
+    arrow.addEventListener('mouseenter', function () {
+        this.classList.add('moved');
+    });
+});
+
+
+/**
+ * Adds the 'moved' class to the right scroll-down arrow when the mouse enters it.
+ */
+document.querySelectorAll('.scroll-down-right-arrow').forEach(function (arrow) {
+    arrow.addEventListener('mouseenter', function () {
+        this.classList.add('moved');
+    });
+});
+
 
 /**
  * Changes the displayed image for a project based on navigation direction.

@@ -20,6 +20,7 @@ function renderSkillsTemplate() {
  */
 function renderFooterTemplate () {
     return `
+        <div id="contact"></div>
         <div class="footer-container">
             <div class="footer-left">
                 <a href="index.html">
