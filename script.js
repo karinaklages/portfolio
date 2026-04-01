@@ -60,7 +60,7 @@ const ball = document.querySelector('.gradient-ball');
  */
 function init() {
     renderSkills();
-    renderEnFooter();
+    renderFooter();
 }
 
 window.onload = init;
@@ -88,9 +88,9 @@ function renderSkills() {
 /**
  * Renders the English footer using the footer template.
  */
-function renderEnFooter() {
-    const footer = document.getElementById('footerEn');
-    footer.innerHTML = renderEnFooterTemplate();
+function renderFooter() {
+    const footer = document.getElementById('footer');
+    footer.innerHTML = renderFooterTemplate();
 }
 
 
