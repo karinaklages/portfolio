@@ -92,6 +92,18 @@
     transform: scale(1.2);
 }
 
+.project-navigation:active img{
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+.project-navigation:active {
+    transform: none;
+    box-shadow: none;
+    background: none;
+    border: none;
+}
+
 .project-details-container {
     display: flex;
     flex-direction: column;

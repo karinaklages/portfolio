@@ -99,6 +99,12 @@ button:hover {
     font-weight: 700;
 }
 
+button:active {
+    color: var(--farbe-cream);
+    background-color: var(--farbe-black);
+    border: solid 4px var(--farbe-black);
+}
+
 header {
     background-color: var(--farbe-cream);
     position: fixed;
