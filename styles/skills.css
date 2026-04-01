@@ -103,3 +103,49 @@
     align-items: center;
     margin-top: 80px;
 }
+
+.inline-link {
+    position: relative;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: inherit;
+    color: var(--farbe-lilac);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 6px;
+    transition: transform 0.3s ease;
+}
+
+.inline-link::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.inline-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 55%;
+    width: 45%;
+    height: 2px;
+    background-color: var(--farbe-lilac);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.inline-link:hover::after {
+    transform: scaleX(1);
+}
+
+.inline-link:hover {
+    font-weight: 600;
+    transform: translateX(6px);
+    color: var(--farbe-lilac);
+}

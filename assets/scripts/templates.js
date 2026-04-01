@@ -40,8 +40,8 @@ function renderFooterTemplate () {
                     </a>
                 </div>
                 <div class="link-area">
-                    <a class="footer-links" href="privacy-policy.html">Privacy Policy</a>
-                    <a class="footer-links" href="legal-notice.html">Legal Notice</a>
+                    <a class="footer-links" href="privacy-policy.html" data-text="Privacy Policy">Privacy Policy</a>
+                    <a class="footer-links" href="legal-notice.html" data-text="Legal Notice">Legal Notice</a>
                 </div>
             </div>
         </div>
