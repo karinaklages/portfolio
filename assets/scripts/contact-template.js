@@ -11,9 +11,9 @@ function renderContactTemplate() {
                 <p class="contact-subtitle">Want to discuss a new project?</p>
                 <p class="contact-body">Let's talk and make it happen.</p>
                 <div class="contact-form">
-                    <input type="text" class="form-field" placeholder="Your Name" />
-                    <input type="email" class="form-field" placeholder="Your Email" />
-                    <textarea class="form-field form-textarea" placeholder="Your Message"></textarea>
+                    <input type="text" id="name" class="form-field" placeholder="Your Name" />
+                    <input type="email" id="email" class="form-field" placeholder="Your Email" />
+                    <textarea id="message" class="form-field form-textarea" placeholder="Your Message"></textarea>
                     <label class="form-checkbox-label">
                         <input type="checkbox" class="form-checkbox" id="privacy" />
                         <span class="form-checkbox-custom"></span>

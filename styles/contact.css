@@ -84,6 +84,7 @@
     line-height: 120%;
     color: var(--farbe-cream);
     cursor: pointer;
+    margin-left: 0px;
 }
 
 .form-checkbox {
@@ -118,7 +119,7 @@
     border: 2px solid var(--farbe-black);
     border-top: none;
     border-left: none;
-    transform: translate(-10%, -10%) rotate(45deg);
+    transform: translate(-4%, -4%) rotate(45deg);
 }
 
 .form-checkbox-label:hover .form-checkbox-custom {
