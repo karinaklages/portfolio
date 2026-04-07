@@ -25,17 +25,55 @@ header img {
 .navigation {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
 }
 
-.navigation a {
+.navigation button {
+    all: unset;
     font-family: 'Syne';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     color: var(--farbe-black);
     text-decoration: none;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+}
+
+.navigation button::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    width: 60%;
+    height: 2px;
+    background-color: var(--farbe-black);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: 0 !important;
+}
+
+.navigation button:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation button.active,
+.navigation focus.active {
+    outline: 2.5px solid var(--farbe-lilac);
+    outline-offset: 4px;
+    z-index: 999 !important;
+}
+
+.navigation button.active::after {
+    transform: scaleX(0);
 }
 
 label {
@@ -63,3 +101,67 @@ label {
 }
 
 .f1 { opacity: 1; }
+
+.width {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.toggle-menu {
+    height: 100vh;
+}
+
+.footer-direction {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.toggle-menu-left {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.toggle-menu-right {
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+.open-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.open-menu a {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: -2.5%;
+    color: var(--farbe-schwarz);
+}
+
+.toggle-footer-heading {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 78px;
+    letter-spacing: 1%;
+    color: var(--farbe-cream);
+}
+
+.footer-link-text {
+    font-family: 'Overpass';
+    font-size: 23px;
+    font-weight: 300;
+    color: var(--farbe-cream);
+    line-height: 120%;
+    margin-top: -30px;
+}

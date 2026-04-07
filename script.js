@@ -44,6 +44,7 @@ function init() {
     renderSkills();
     renderContact();
     renderFooter();
+    setActiveLanguage();
 }
 
 window.onload = init;
@@ -87,6 +88,37 @@ function renderFooter() {
 
 
 /**
+ * Updates the active state of the language buttons based on the currently selected language.
+ * The active language button receives the 'active' CSS class.
+ */
+function setActiveLanguage() {
+    const currentLang = localStorage.getItem('lang') || 'en';
+    document.getElementById('languageEn').classList.toggle('active', currentLang === 'en');
+    document.getElementById('languageDe').classList.toggle('active', currentLang === 'de');
+}
+
+
+/**
+ * Event listener for the English language button.
+ * Sets the language to 'en' in localStorage and updates the active button state.
+ */
+document.getElementById('languageEn').addEventListener('click', () => {
+    localStorage.setItem('lang', 'en');
+    setActiveLanguage();
+});
+
+
+/**
+ * Event listener for the German language button.
+ * Sets the language to 'de' in localStorage and updates the active button state.
+ */
+document.getElementById('languageDe').addEventListener('click', () => {
+    localStorage.setItem('lang', 'de');
+    setActiveLanguage();
+});
+
+
+/**
  * Animates the burger icon frames forward (burger → X).
  * @param {NodeList} frames - All frame elements.
  */
@@ -121,6 +153,7 @@ function animateBurgerClose(frames) {
 burger.addEventListener('click', () => {
     const header = document.querySelector('header');
     const frames = document.querySelectorAll('.frame');
+    const menu = document.getElementById('toggleMenu');
     const isOpen = header.classList.contains('menu-open');
     frames.forEach(f => {
         f.style.opacity = '0';
@@ -128,11 +161,32 @@ burger.addEventListener('click', () => {
     });
     if (isOpen) {
         header.classList.remove('menu-open');
+        menu.classList.add('d-none');
         animateBurgerClose(frames);
     } else {
         header.classList.add('menu-open');
+        menu.classList.remove('d-none');
         animateBurgerOpen(frames);
     }
+});
+
+
+/**
+ * Closes the toggle menu with a short delay when a menu link is clicked.
+ * @event click
+ */
+document.querySelectorAll('.open-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        setTimeout(() => {
+            const header = document.querySelector('header');
+            const frames = document.querySelectorAll('.frame');
+            const menu = document.getElementById('toggleMenu');
+            frames.forEach(f => { f.style.opacity = '0'; f.style.animation = 'none'; });
+            header.classList.remove('menu-open');
+            menu.classList.add('d-none');
+            animateBurgerClose(frames);
+        }, 300);
+    });
 });
 
 
