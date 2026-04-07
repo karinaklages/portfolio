@@ -104,6 +104,7 @@ button {
     padding: 16px 55px;
     cursor: pointer;
     transition: padding 0.3s ease, font-weight 0.3s ease;
+    text-align: center;
 }
 
 button:hover {
