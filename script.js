@@ -1,29 +1,15 @@
-/**
- * Stores arrays of image filenames for each project.
- * @type {Object.<string, string[]>}
- */
 const projectImages = {
     projectOne:   ["join-1.jpg", "join-2.jpg", "join-3.jpg", "join-4.jpg", "join-5.jpg"],
     projectTwo:   ["platformer-1.jpg", "platformer-2.jpg", "platformer-3.jpg"],
     projectThree: ["pokedex-1.jpg", "pokedex-2.jpg", "pokedex-3.jpg", "pokedex-4.jpg", "pokedex-5.jpg"]
 };
 
-
-/**
- * Tracks the current image index for each project.
- * @type {Object.<string, number>}
- */
 const currentIndex = {
     projectOne:   0,
     projectTwo:   0,
     projectThree: 0
 };
 
-
-/**
- * List of skills with their names and icon paths.
- * @type {{ name: string, icon: string }[]}
- */
 const skills = [
     { name: "Mac OS", icon: "./assets/icons/apple.svg", alt: "Apple Icon" },
     { name: "InDesign", icon: "./assets/icons/indesign.svg", alt: "InDesign Icon" },
@@ -47,12 +33,8 @@ const skills = [
     { name: "Scrum", icon: "./assets/icons/scrum.svg", alt: "Scrum Icon" }
 ];
 
-
-/**
- * The DOM element representing the gradient ball that follows the mouse.
- * @type {HTMLElement}
- */
 const ball = document.querySelector('.gradient-ball');
+const burger = document.querySelector('.burger-menu');
 
 
 /**
@@ -105,19 +87,59 @@ function renderFooter() {
 
 
 /**
- * Adds the 'moved' class to the left scroll-down arrow when the mouse enters it.
+ * Animates the burger icon frames forward (burger → X).
+ * @param {NodeList} frames - All frame elements.
  */
-document.querySelectorAll('.scroll-down-left-arrow').forEach(function (arrow) {
-    arrow.addEventListener('mouseenter', function () {
-        this.classList.add('moved');
+function animateBurgerOpen(frames) {
+    setTimeout(() => { frames[0].style.opacity = '0'; }, 0);
+    setTimeout(() => { frames[1].style.opacity = '1'; }, 0);
+    setTimeout(() => { frames[1].style.opacity = '0'; }, 67);
+    setTimeout(() => { frames[2].style.opacity = '1'; }, 67);
+    setTimeout(() => { frames[2].style.opacity = '0'; }, 133);
+    setTimeout(() => { frames[3].style.opacity = '1'; }, 133);
+}
+
+
+/**
+ * Animates the burger icon frames backward (X → burger).
+ * @param {NodeList} frames - All frame elements.
+ */
+function animateBurgerClose(frames) {
+    setTimeout(() => { frames[3].style.opacity = '0'; }, 0);
+    setTimeout(() => { frames[2].style.opacity = '1'; }, 0);
+    setTimeout(() => { frames[2].style.opacity = '0'; }, 67);
+    setTimeout(() => { frames[1].style.opacity = '1'; }, 67);
+    setTimeout(() => { frames[1].style.opacity = '0'; }, 133);
+    setTimeout(() => { frames[0].style.opacity = '1'; }, 133);
+}
+
+
+/**
+ * Toggles the burger menu open/closed and triggers the appropriate animation.
+ * @event click
+ */
+burger.addEventListener('click', () => {
+    const header = document.querySelector('header');
+    const frames = document.querySelectorAll('.frame');
+    const isOpen = header.classList.contains('menu-open');
+    frames.forEach(f => {
+        f.style.opacity = '0';
+        f.style.animation = 'none';
     });
+    if (isOpen) {
+        header.classList.remove('menu-open');
+        animateBurgerClose(frames);
+    } else {
+        header.classList.add('menu-open');
+        animateBurgerOpen(frames);
+    }
 });
 
 
 /**
- * Adds the 'moved' class to the right scroll-down arrow when the mouse enters it.
+ * Adds the 'moved' class to the left scroll-down arrow when the mouse enters it.
  */
-document.querySelectorAll('.scroll-down-right-arrow').forEach(function (arrow) {
+document.querySelectorAll('.scroll-down-left-arrow').forEach(function (arrow) {
     arrow.addEventListener('mouseenter', function () {
         this.classList.add('moved');
     });

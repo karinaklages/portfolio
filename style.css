@@ -117,39 +117,6 @@ button:active {
     border: solid 4px var(--farbe-black);
 }
 
-header {
-    background-color: var(--farbe-cream);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-.header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 20px;
-    height: 92px;
-}
-
-header img {
-    width: 63px;
-}
-
-.navigation a {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--farbe-black);
-    text-decoration: none;
-}
-
 .hero-section {
     height: 100vh;
     display: flex;
