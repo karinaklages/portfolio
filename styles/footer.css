@@ -1,9 +1,8 @@
 footer {
     background-color: var(--farbe-black);
-    clip-path: polygon(0 0%, 100% 30%, 100% 100%, 0% 100%);
-    padding-top: 200px;
+    clip-path: polygon(0 0%, 100% 18%, 100% 100%, 0% 100%);
+    padding-top: 30px;
     margin-top: auto;
-    height: 315px;
     padding-bottom: 50px;
 }
 

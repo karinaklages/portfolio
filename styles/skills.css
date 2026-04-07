@@ -146,6 +146,6 @@
 
 .inline-link:hover {
     font-weight: 600;
-    transform: translateX(6px);
+    transform: translateX(3px);
     color: var(--farbe-lilac);
 }
