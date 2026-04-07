@@ -5,24 +5,6 @@
  */
 function renderFooterTemplate () {
     return `
-        <section id="contact" class="contact-section">
-            <h2 class="contact-heading">Say Hi</h2>
-            <div class="contact-inner">
-                <p class="contact-subtitle">Want to discuss a new project?</p>
-                <p class="contact-body">Let's talk and make it happen.</p>
-                <div class="contact-form">
-                    <input type="text" class="form-field" placeholder="Your Name" />
-                    <input type="email" class="form-field" placeholder="Your Email" />
-                    <textarea class="form-field form-textarea" placeholder="Your Message"></textarea>
-                    <label class="form-checkbox-label">
-                        <input type="checkbox" class="form-checkbox" id="privacy" />
-                        <span class="form-checkbox-custom"></span>
-                        <span>I've read the <a href="privacy-policy.html" class="form-privacy-link inline-link" data-text="Privacy Policy">Privacy Policy</a><span class="checkbox-text-rest"> and agree to the processing of my data as outlined.</span></span>
-                    </label>
-                    <button class="form-submit">Send Message</button>
-                </div>
-            </div>
-        </section>
         <div class="footer-container">
             <div class="footer-left">
                 <a href="index.html">
@@ -50,10 +32,3 @@ function renderFooterTemplate () {
         </div>
     `;
 }
-
-
-
-                    // <label class="form-checkbox-label">
-                    //     <input type="checkbox" class="form-checkbox" />
-                    //     I've read the <a href="privacy-policy.html" class="form-privacy-link">Privacy Policy</a> and agree to the processing of my data as outlined.
-                    // </label>

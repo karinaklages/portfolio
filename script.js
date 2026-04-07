@@ -60,6 +60,7 @@ const ball = document.querySelector('.gradient-ball');
  */
 function init() {
     renderSkills();
+    renderContact();
     renderFooter();
 }
 
@@ -86,12 +87,22 @@ function renderSkills() {
 
 
 /**
- * Renders the English footer using the footer template.
+ * Renders the contact section into the footer element.
+ */
+function renderContact() {
+    const footer = document.getElementById('footer');
+    footer.insertAdjacentHTML('afterbegin', renderContactTemplate());
+}
+
+
+/**
+ * Renders the English footer into the footer element, after the contact section.
  */
 function renderFooter() {
     const footer = document.getElementById('footer');
-    footer.innerHTML = renderFooterTemplate();
+    footer.insertAdjacentHTML('beforeend', renderFooterTemplate());
 }
+
 
 /**
  * Adds the 'moved' class to the left scroll-down arrow when the mouse enters it.

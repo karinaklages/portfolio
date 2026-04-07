@@ -1,6 +1,6 @@
 footer {
     background-color: var(--farbe-black);
-    clip-path: polygon(0 0%, 100% 18%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0px, 100% 120px, 100% 100%, 0% 100%);
     padding-top: 30px;
     margin-top: auto;
     padding-bottom: 50px;
@@ -41,6 +41,11 @@ footer {
 .footer-left img {
     width: 85px;
     padding-left: 20px;
+}
+
+.footer-left,
+.footer-right {
+    margin-top: 100px;
 }
 
 .copywrite {
