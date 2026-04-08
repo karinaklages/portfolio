@@ -121,7 +121,6 @@ label {
     display: block !important;
     width: 100% !important;
     padding-top: 30px;
-    padding-bottom: 50px;
 }
 
 .footer-direction {
@@ -137,12 +136,10 @@ label {
 
 .toggle-menu-left {
     padding-left: 0px;
-    margin-bottom: 16px;
 }
 
 .toggle-menu-right {
     padding-right: 0px;
-    margin-bottom: 16px;
     margin-right: -20px;
 }
 
