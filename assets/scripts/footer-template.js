@@ -1,7 +1,7 @@
 /**
- * Renders the English footer HTML template.
+ * Renders the footer HTML template.
  * Contains logo, copyright, social media, and legal links.
- * @returns {string} HTML string for the English footer
+ * @returns {string} HTML string for the footer
  */
 function renderFooterTemplate () {
     return `

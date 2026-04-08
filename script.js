@@ -34,13 +34,13 @@ const skills = [
 ];
 
 const ball = document.querySelector('.gradient-ball');
-const burger = document.querySelector('.burger-menu');
 
 
 /**
- * Initializes the page by rendering skills and the English footer.
+ * Initializes the page by rendering sections.
  */
 function init() {
+    renderHeader();
     renderSkills();
     renderContact();
     renderFooter();
@@ -79,7 +79,7 @@ function renderContact() {
 
 
 /**
- * Renders the English footer into the footer element, after the contact section.
+ * Renders the footer into the footer element, after the contact section.
  */
 function renderFooter() {
     const footer = document.getElementById('footer');
@@ -96,98 +96,6 @@ function setActiveLanguage() {
     document.getElementById('languageEn').classList.toggle('active', currentLang === 'en');
     document.getElementById('languageDe').classList.toggle('active', currentLang === 'de');
 }
-
-
-/**
- * Event listener for the English language button.
- * Sets the language to 'en' in localStorage and updates the active button state.
- */
-document.getElementById('languageEn').addEventListener('click', () => {
-    localStorage.setItem('lang', 'en');
-    setActiveLanguage();
-});
-
-
-/**
- * Event listener for the German language button.
- * Sets the language to 'de' in localStorage and updates the active button state.
- */
-document.getElementById('languageDe').addEventListener('click', () => {
-    localStorage.setItem('lang', 'de');
-    setActiveLanguage();
-});
-
-
-/**
- * Animates the burger icon frames forward (burger → X).
- * @param {NodeList} frames - All frame elements.
- */
-function animateBurgerOpen(frames) {
-    setTimeout(() => { frames[0].style.opacity = '0'; }, 0);
-    setTimeout(() => { frames[1].style.opacity = '1'; }, 0);
-    setTimeout(() => { frames[1].style.opacity = '0'; }, 67);
-    setTimeout(() => { frames[2].style.opacity = '1'; }, 67);
-    setTimeout(() => { frames[2].style.opacity = '0'; }, 133);
-    setTimeout(() => { frames[3].style.opacity = '1'; }, 133);
-}
-
-
-/**
- * Animates the burger icon frames backward (X → burger).
- * @param {NodeList} frames - All frame elements.
- */
-function animateBurgerClose(frames) {
-    setTimeout(() => { frames[3].style.opacity = '0'; }, 0);
-    setTimeout(() => { frames[2].style.opacity = '1'; }, 0);
-    setTimeout(() => { frames[2].style.opacity = '0'; }, 67);
-    setTimeout(() => { frames[1].style.opacity = '1'; }, 67);
-    setTimeout(() => { frames[1].style.opacity = '0'; }, 133);
-    setTimeout(() => { frames[0].style.opacity = '1'; }, 133);
-}
-
-
-/**
- * Toggles the burger menu open/closed and triggers the appropriate animation.
- * @event click
- */
-burger.addEventListener('click', () => {
-    const header = document.querySelector('header');
-    const frames = document.querySelectorAll('.frame');
-    const menu = document.getElementById('toggleMenu');
-    const isOpen = header.classList.contains('menu-open');
-    frames.forEach(f => {
-        f.style.opacity = '0';
-        f.style.animation = 'none';
-    });
-    if (isOpen) {
-        header.classList.remove('menu-open');
-        menu.classList.add('d-none');
-        animateBurgerClose(frames);
-    } else {
-        header.classList.add('menu-open');
-        menu.classList.remove('d-none');
-        animateBurgerOpen(frames);
-    }
-});
-
-
-/**
- * Closes the toggle menu with a short delay when a menu link is clicked.
- * @event click
- */
-document.querySelectorAll('.open-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        setTimeout(() => {
-            const header = document.querySelector('header');
-            const frames = document.querySelectorAll('.frame');
-            const menu = document.getElementById('toggleMenu');
-            frames.forEach(f => { f.style.opacity = '0'; f.style.animation = 'none'; });
-            header.classList.remove('menu-open');
-            menu.classList.add('d-none');
-            animateBurgerClose(frames);
-        }, 300);
-    });
-});
 
 
 /**
