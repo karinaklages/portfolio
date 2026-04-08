@@ -45,6 +45,7 @@ function init() {
     renderContact();
     renderFooter();
     setActiveLanguage();
+    initFormValidation();
 }
 
 window.onload = init;
