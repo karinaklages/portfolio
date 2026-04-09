@@ -179,3 +179,44 @@ label {
     line-height: 120%;
     margin-top: -30px;
 }
+
+.open-nav-link {
+  position: relative;
+  display: inline-block;
+  font-size: 48px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--farbe-black);
+  padding: 20px 30px;
+}
+
+.open-nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-left: 4px solid var(--farbe-black);
+  border-bottom: 4px solid var(--farbe-black);
+}
+
+.open-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: var(--farbe-black);
+  transition: width 0.4s ease;
+}
+
+.open-nav-link:hover::after {
+  width: 75%;
+}
+
+.open-nav-link:active {
+  outline: 4px solid var(--farbe-black);
+  outline-offset: -4px;
+}

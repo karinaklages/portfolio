@@ -24,9 +24,9 @@ function renderHeaderTemplate () {
         </div>
         <div class="toggle-menu d-none" id="toggleMenu">
             <div class="open-menu width">
-                <a href="index.html#about">About Me</a>
-                <a href="index.html#skills">My Skills</a>
-                <a href="index.html#portfolio">Portfolio</a>
+                <a class="open-nav-link" href="index.html#about">About Me</a>
+                <a class="open-nav-link" href="index.html#skills">My Skills</a>
+                <a class="open-nav-link" href="index.html#portfolio">Portfolio</a>
             </div>
             <footer class="toggle-footer">
                 <div class="width footer-direction">
