@@ -13,6 +13,11 @@ function renderFooterTemplate () {
                 <p class="copywrite">© Karina Klages 2026</p>
             </div>
             <div class="footer-right">
+                <div class="scroll-up-arrow">
+                    <a href="index.html#hero">
+                        <img src="./assets/icons/arrow-up.svg" alt="Arrow Up Icon">
+                    </a>
+                </div>
                 <div class="social-media-icon">
                     <a href="mailto:karina.klages@web.de" target="_blank">
                         <img src="./assets/icons/mail-icon.svg" alt="Mail Icon">
