@@ -118,6 +118,8 @@ button:active {
     border: solid 4px var(--farbe-black);
 }
 
+/* Hero Section  */
+
 .hero-section {
     height: 100vh;
     display: flex;
@@ -140,6 +142,67 @@ button:active {
     width: 600px;
     margin: 0;
 }
+
+.hero-email {
+    position: absolute;
+    left: calc((100vw - 1380px) / 2);
+    bottom: 10%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 19px;
+    color: var(--farbe-black);
+    text-decoration: none;
+}
+
+.hero-email:hover {
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* Scroll Down Indicator */
+
+.scroll-indicator {
+    position: absolute;
+    right: calc((100vw - 1380px) / 2);
+    bottom: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.75rem;
+}
+
+.scroll-arrow {
+    width: 100px;
+    height: 85px;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-arrow img {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-text {
+    font-family: 'Overpass';
+    font-weight: 300;
+    font-size: 19px;
+    text-align: center;
+}
+
+@keyframes scrollBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+/* Sections  */
 
 main {
     flex: 1;
