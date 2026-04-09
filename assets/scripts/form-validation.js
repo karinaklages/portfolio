@@ -6,7 +6,11 @@ function initFormValidation() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
     const submitBtn = form.querySelector('.form-submit');
-    submitBtn.addEventListener('click', () => validateForm());
+    submitBtn.addEventListener('click', () => {
+        if (validateForm()) {
+            clearForm();
+        }
+    });
 }
 
 
@@ -86,6 +90,24 @@ function removeFieldFeedback(fieldId) {
     }
     const error = document.querySelector(`[data-error="${fieldId}"]`);
     if (error) error.remove();
+}
+
+
+/**
+ * Clears all form fields and removes validation feedback.
+ */
+function clearForm() {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+    document.getElementById('privacy').checked = false;
+    
+    // Remove all validation feedback
+    removeFieldFeedback('name');
+    removeFieldFeedback('email');
+    removeFieldFeedback('message');
+    const privacyError = document.querySelector('[data-error="privacy"]');
+    if (privacyError) privacyError.remove();
 }
 
 
