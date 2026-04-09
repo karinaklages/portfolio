@@ -1,7 +1,7 @@
 /**
  * Renders the header HTML template.
  * Contains logo, navigation, and toggle menu.
- * @returns {string} HTML string for the header
+ * @returns {string} HTML string for the header.
  */
 function renderHeaderTemplate () {
     return `

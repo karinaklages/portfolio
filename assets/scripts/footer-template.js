@@ -1,7 +1,7 @@
 /**
  * Renders the footer HTML template.
  * Contains logo, copyright, social media, and legal links.
- * @returns {string} HTML string for the footer
+ * @returns {string} HTML string for the footer.
  */
 function renderFooterTemplate () {
     return `

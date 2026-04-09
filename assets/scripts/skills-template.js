@@ -1,7 +1,7 @@
 /**
  * Renders the HTML template for the skills section.
  * Iterates over the global 'skills' array and creates a list item for each skill.
- * @returns {string} HTML string for the skills list
+ * @returns {string} HTML string for the skills list.
  */
 function renderSkillsTemplate() {
     return skills.map((skill, index) => `

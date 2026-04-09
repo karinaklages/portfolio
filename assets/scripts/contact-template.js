@@ -1,7 +1,7 @@
 /**
  * Renders the contact form section HTML template.
  * Contains heading, subtitle, and a form with name, email, message, privacy checkbox, and submit button.
- * @returns {string} HTML string for the contact section
+ * @returns {string} HTML string for the contact section.
  */
 function renderContactTemplate() {
     return `
