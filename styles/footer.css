@@ -122,7 +122,8 @@ footer {
 .scroll-up-arrow {
     width: 100px;
     height: 85px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     animation: scrollBounceUp 2s ease-in-out infinite;
 }
 
