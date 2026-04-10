@@ -34,7 +34,7 @@ footer {
 .link-area {
     display: flex;
     justify-content: flex-end;
-    margin-top: 16px;
+    margin-top: -8px;
     margin-right: 4px;
 }
 

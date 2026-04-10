@@ -33,6 +33,7 @@ function renderFooterTemplate () {
                     <a class="footer-links" href="privacy-policy.html" data-text="Privacy Policy">Privacy Policy</a>
                     <a class="footer-links" href="legal-notice.html" data-text="Legal Notice">Legal Notice</a>
                 </div>
+                <p class="copywrite d-none">© Karina Klages 2026</p>
             </div>
         </div>
     `;
