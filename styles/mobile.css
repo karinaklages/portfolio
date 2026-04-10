@@ -96,6 +96,10 @@
     }
 
     /* Skills Section */
+    .skills-outline {
+        padding: 80px 60px;
+    }
+
     .skills-outline::before {
         background: linear-gradient(
             to right,
@@ -108,11 +112,20 @@
     }
 
     .skills-grid {
-        gap: 20px 30px;
+        margin-top: 35px;
+        gap: 30px 22px;
     }
 
     .skills-information p {
         text-align: center;
+    }
+
+    .skills-card img {
+        width: 43px;
+    }
+
+    .skills-card span {
+        font-size: 14px;
     }
 
     /* Legal Notice & Privacy Policy */
@@ -124,6 +137,27 @@
 }
 
 @media (max-width: 700px) {
+    .scroll-down-right-arrow img {
+        width: 40% !important;
+        height: auto;
+    }
+
+    .scroll-down-left-arrow img {
+        width: 40% !important;
+        height: auto; 
+        margin-top: -16px;
+    }
+
+    /* Skills Section */
+    .skills-information p {
+        font-size: 16px;
+    }
+
+    /* References and Portfolio Section */
+    .section-subhead {
+        font-size: 20px;
+    }
+
     /* Toggle Menu */
     .open-menu {
         gap: 30px;
@@ -184,6 +218,31 @@
     /* Header Menu */
     .burger-menu {
         margin-left: 10px;
+    }
+
+    /* Skills Section */
+    .skills-outline {
+        padding: 60px 30px;
+    }
+
+    .skills-outline::before {
+        background: linear-gradient(
+            to right,
+            var(--farbe-black) calc(50% - 120px),
+            transparent calc(50% - 120px),
+            transparent calc(50% + 120px),
+            var(--farbe-black) calc(50% + 120px)
+        );
+        pointer-events: none;
+    }
+
+    /* Reference Section  */
+    .reference-name {
+        white-space: nowrap;
+    }
+
+    .references-container {
+        padding: 35px 20px;
     }
 
     /* Contact Form */
