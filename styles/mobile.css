@@ -84,6 +84,28 @@
         display: flex;
         justify-content: center;
     }
+
+    /* Portfolio Section */
+    .project-wrapper-even {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .project-wrapper-odd {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .project-details-container {
+        margin-bottom: 20px;
+        width: 655px; 
+    }
 }
 
 @media (max-width: 1220px) {
