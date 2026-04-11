@@ -91,6 +91,27 @@
         font-size: 55px;
     }
 
+    /* Toggle Menu */
+    .open-menu {
+        gap: 35px;
+    }
+
+    .open-nav-link {
+        font-size: 65px !important;
+        padding: 10px 25px !important;
+    }
+
+    .open-nav-link::before {
+        width: 25px;
+        height: 25px;
+        border-left: 4px solid var(--farbe-black);
+        border-bottom: 4px solid var(--farbe-black);
+    }
+
+    .toggle-footer-heading {
+        font-size: 56px; 
+    }
+
     /* Hero Section */
     .subhead h3 {
         font-size: 36px;
