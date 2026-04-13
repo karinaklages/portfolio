@@ -62,7 +62,7 @@ const portfolioProjects = [
         description: 'A concept and corporate identity were developed to bring the Aji Teekunst brand to life. A visual identity was created, numerous teas were photographed, and infusions were tasted.<br><br>In addition, a website was designed and an online store was set up. The brand also features matching business stationery as well as its own product and packaging designs.',
         liveUrl: '',
         githubUrl: '',
-        images: ['aji-1.jpg', 'aji-2.jpg', 'aji-3.jpg', 'aji-4.jpg', 'aji-5.jpg', 'aji-6.jpg', 'aji-7.jpg']
+        images: ['aji-1.jpg', 'aji-2.jpg', 'aji-3.jpg', 'aji-4.jpg', 'aji-5.jpg', 'aji-6.jpg', 'aji-7.jpg', 'aji-8.jpg']
     },
     {
         id: 'projectFive',
