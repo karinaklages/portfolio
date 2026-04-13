@@ -59,6 +59,24 @@
     margin-top: 25px;
 }
 
+.about-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+}
+
+.about-information img {
+    width: 36px;
+    margin-top: 22px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 700px) {
     .about-me p {
         font-size: 20px;
@@ -78,22 +96,4 @@
     .about-portrait::after {
         transform: translate(12px, 12px);
     }
-}
-
-.about-information {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 22px;
-}
-
-.about-information img {
-    width: 36px;
-    margin-top: 22px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
 }

@@ -37,6 +37,10 @@
         font-size: clamp(16px, calc(var(--hero-font-size) * 0.15), 20px);
     }
 
+    .hero-email:hover {
+        font-size: clamp(16px, calc(var(--hero-font-size) * 0.15), 20px);
+    }
+
     .scroll-indicator {
         position: absolute;
         right: 10px;
@@ -389,6 +393,10 @@
     }
 
     .references-container {
+        padding: 35px 20px;
+    }
+
+    .references-container:hover {
         padding: 35px 20px;
     }
 
