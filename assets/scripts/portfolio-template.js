@@ -43,8 +43,12 @@ function renderProjectTemplate(project, isOdd) {
                 <span class="project-subhead">${project.subhead}</span>
                 <p>${project.description}</p>
                 <div class="button-area">
-                    <a href="${project.liveUrl}" target="_blank"><button>Live</button></a>
-                    <a href="${project.githubUrl}" target="_blank"><button>GitHub</button></a>
+                    ${project.liveUrl && project.liveUrl.trim() !== '' ? `
+                        <a href="${project.liveUrl}" target="_blank"><button>Live</button></a>
+                    ` : ''}
+                    ${project.githubUrl && project.githubUrl.trim() !== '' ? `
+                        <a href="${project.githubUrl}" target="_blank"><button>GitHub</button></a>
+                    ` : ''}
                 </div>
             </div>
         </div>

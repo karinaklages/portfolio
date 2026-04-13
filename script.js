@@ -26,7 +26,7 @@ const skills = [
 const portfolioProjects = [
     {
         id: 'projectOne',
-        counter: '01/04',
+        counter: '01/05',
         headline: 'Join',
         subhead: 'HTML | CSS | JavaScript | Git | Firebase',
         description: 'The web app "Join" was built using HTML, CSS, JavaScript, Git and Firebase, in collaboration with three other team partners. The app serves as a project management tool that visualises the status and responsibilities of tasks.',
@@ -36,7 +36,7 @@ const portfolioProjects = [
     },
     {
         id: 'projectTwo',
-        counter: '02/04',
+        counter: '02/05',
         headline: 'Roots & Dust',
         subhead: 'HTML | CSS | JavaScript | Git',
         description: 'The platformer "Roots & Dust" was developed using JavaScript and object-oriented programming. Please click the live view to help Brave Viking defeat the Dark Knight!',
@@ -46,13 +46,33 @@ const portfolioProjects = [
     },
     {
         id: 'projectThree',
-        counter: '03/04',
+        counter: '03/05',
         headline: 'Pokédex',
         subhead: 'HTML | CSS | JavaScript | Git | Rest-API',
         description: 'In this project, a Pokémon trainer registry was developed based on the official PokéAPI. The goal was to make systems and data retrieval compatible. Try to find your favorite Pokémon.',
         liveUrl: 'https://karina-klages.developerakademie.net/pokedex/index.html',
         githubUrl: 'https://github.com/karinaklages/pokedex',
         images: ['pokedex-1.jpg', 'pokedex-2.jpg', 'pokedex-3.jpg', 'pokedex-4.jpg', 'pokedex-5.jpg']
+    },
+    {
+        id: 'projectFour',
+        counter: '04/05',
+        headline: 'Aji Teekunst',
+        subhead: 'Brand Design | Web Design | Photography',
+        description: 'A concept and corporate identity were developed to bring the Aji Teekunst brand to life. A visual identity was created, numerous teas were photographed, and infusions were tasted.<br><br>In addition, a website was designed and an online store was set up. The brand also features matching business stationery as well as its own product and packaging designs.',
+        liveUrl: '',
+        githubUrl: '',
+        images: ['aji-1.jpg', 'aji-2.jpg', 'aji-3.jpg', 'aji-4.jpg', 'aji-5.jpg', 'aji-6.jpg', 'aji-7.jpg']
+    },
+    {
+        id: 'projectFive',
+        counter: '05/05',
+        headline: 'The Fish Club',
+        subhead: 'Conceptual Work | Brand Design',
+        description: 'An established seafood restaurant was looking for a modern logo design that would appeal primarily to a younger audience and reflect the renovated space and updated menu.<br><br>I also developed the entire brand identity so that the owners could consistently apply the design language in the future. The design is bold, playful, and humorous.',
+        liveUrl: '',
+        githubUrl: '',
+        images: ['fish-1.jpg', 'fish-2.jpg', 'fish-3.jpg', 'fish-4.jpg', 'fish-5.jpg', 'fish-6.jpg', 'fish-7.jpg']
     }
 ];
 
