@@ -11,8 +11,8 @@ const skills = [
     { name: 'HTML', icon: './assets/icons/html.svg', alt: 'HTML Icon' },
     { name: 'CSS', icon: './assets/icons/css.svg', alt: 'CSS Icon' },
     { name: 'JavaScript', icon: './assets/icons/javascript.svg', alt: 'JavaScript Icon' },
-    // { name: 'Angular', icon: './assets/icons/angular.svg', alt: 'Angular Icon' },
     // { name: 'TypeScript', icon: './assets/icons/typescript.svg', alt: 'TypeScript Icon' },
+    // { name: 'Angular', icon: './assets/icons/angular.svg', alt: 'Angular Icon' },
     { name: 'Bootstrap', icon: './assets/icons/bootstrap.svg', alt: 'Bootstrap Icon' },
     // { name: 'Wordpress', icon: './assets/icons/wordpress.svg', alt: 'WordPress Icon' },
     { name: 'VS Code', icon: './assets/icons/vscode.svg', alt: 'VS Code Icon' },
@@ -30,6 +30,7 @@ const portfolioProjects = [
         headline: 'Join',
         subhead: 'HTML | CSS | JavaScript | Git | Firebase',
         description: 'The web app "Join" was built using HTML, CSS, JavaScript, Git and Firebase, in collaboration with three other team partners. The app serves as a project management tool that visualises the status and responsibilities of tasks.',
+        description_de: 'Die Web-App "Join" wurde in Zusammenarbeit mit drei weiteren Teammitgliedern unter Verwendung von HTML, CSS, JavaScript, Git und Firebase entwickelt. Als ein Projektmanagement-Tool für Aufgaben.',
         liveUrl: 'https://karina-klages.developerakademie.net/join/index.html',
         githubUrl: 'https://github.com/karinaklages/join',
         images: ['join-1.jpg', 'join-2.jpg', 'join-3.jpg', 'join-4.jpg', 'join-5.jpg']
@@ -40,6 +41,7 @@ const portfolioProjects = [
         headline: 'Roots & Dust',
         subhead: 'HTML | CSS | JavaScript | Git',
         description: 'The platformer "Roots & Dust" was developed using JavaScript and object-oriented programming. Please click the live view to help Brave Viking defeat the Dark Knight!',
+        description_de: 'Das Jump and Run Spiel „Roots & Dust“ wurde mit JavaScript und unter Verwendung objektorientierter Programmierung entwickelt. Besiege den dunklen Ritter.',
         liveUrl: 'https://karina-klages.developerakademie.net/platformer-game/index.html',
         githubUrl: 'https://github.com/karinaklages/platformer-game',
         images: ['platformer-1.jpg', 'platformer-2.jpg', 'platformer-3.jpg']
@@ -50,6 +52,7 @@ const portfolioProjects = [
         headline: 'Pokédex',
         subhead: 'HTML | CSS | JavaScript | Git | Rest-API',
         description: 'In this project, a Pokémon trainer registry was developed based on the official PokéAPI. The goal was to make systems and data retrieval compatible. Try to find your favorite Pokémon.',
+        description_de: 'Im Rahmen dieses Projekts wurde auf Basis der offiziellen PokéAPI ein Pokémon-Trainer-Register entwickelt. Ziel war es, die Systeme und den Datenabruf kompatibel zu gestalten.',
         liveUrl: 'https://karina-klages.developerakademie.net/pokedex/index.html',
         githubUrl: 'https://github.com/karinaklages/pokedex',
         images: ['pokedex-1.jpg', 'pokedex-2.jpg', 'pokedex-3.jpg', 'pokedex-4.jpg', 'pokedex-5.jpg']
@@ -60,6 +63,7 @@ const portfolioProjects = [
         headline: 'Aji Teekunst',
         subhead: 'Conception | Brand Design | Web Design | Photography',
         description: 'A concept and corporate identity were developed to bring the Aji Teekunst brand to life. A visual identity was created, numerous teas were photographed, and infusions were tasted.<br><br>In addition, a website was designed and an online store was set up. The brand also features matching business stationery as well as its own product and packaging designs.',
+        description_de: 'Es wurden ein Konzept und ein Corporate Design entwickelt, um die Marke Aji Teekunst zum Leben zu erwecken. Es wurde eine visuelle Identität geschaffen, zahlreiche Teesorten wurden fotografiert und Aufgüsse verkostet.<br><br>Darüber hinaus wurde eine Website gestaltet und ein Online-Shop eingerichtet. Zur Marke gehören außerdem Geschäftspapiere sowie eigene Produkt- und Verpackungsdesigns.',
         liveUrl: '',
         githubUrl: '',
         images: ['aji-1.jpg', 'aji-2.jpg', 'aji-3.jpg', 'aji-4.jpg', 'aji-5.jpg', 'aji-6.jpg', 'aji-7.jpg', 'aji-8.jpg']
@@ -70,6 +74,7 @@ const portfolioProjects = [
         headline: 'The Fish Club',
         subhead: 'Conception | Brand Design',
         description: 'An established seafood restaurant was looking for a modern logo design that would appeal primarily to a younger audience and reflect the renovated space and updated menu.<br><br>I also developed the entire brand identity so that the owners could consistently apply the design language in the future. The design is bold, playful, and humorous.',
+        description_de: 'Ein Fischrestaurant suchte nach einem modernen Logo-Design, das vor allem ein jüngeres Publikum ansprechen und die renovierten Räumlichkeiten sowie die überarbeitete Speisekarte widerspiegeln sollte.<br><br>Zudem entwickelte ich die gesamte Markenidentität, damit die Inhaber die Designsprache künftig einheitlich umsetzen können. Das Design ist markant, verspielt und humorvoll.',       
         liveUrl: '',
         githubUrl: '',
         images: ['fish-1.jpg', 'fish-2.jpg', 'fish-3.jpg', 'fish-4.jpg', 'fish-5.jpg', 'fish-6.jpg', 'fish-7.jpg']

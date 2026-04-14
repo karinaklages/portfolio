@@ -17,7 +17,7 @@ function renderContactTemplate() {
                     <label class="form-checkbox-label">
                         <input type="checkbox" class="form-checkbox" id="privacy" />
                         <span class="form-checkbox-custom"></span>
-                        <span>I've read the <a href="privacy-policy.html" class="form-privacy-link inline-link" data-text="Privacy Policy">Privacy Policy</a><span class="checkbox-text-rest"> and agree to the processing of my data as outlined.</span></span>
+                        <span data-i18n="error_text"></span>
                     </label>
                     <button type="button" data-i18n="contact_button" class="form-submit">Send Message</button>
                 </form>

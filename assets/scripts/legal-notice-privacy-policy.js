@@ -15,4 +15,5 @@ window.onload = init;
 function renderFooter() {
     const footer = document.getElementById('footer');
     footer.innerHTML = renderFooterTemplate();
+    updatePageTranslations();
 }

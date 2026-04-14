@@ -5,6 +5,10 @@
  * @returns {string} The HTML string for the project.
  */
 function renderProjectTemplate(project, isOdd) {
+    const description = currentLang === 'de' && project.description_de
+        ? project.description_de
+        : project.description;
+
     const imageSection = `
         <div class="project-image-side">
             <div class="project-images" id="${project.id}">
@@ -27,7 +31,7 @@ function renderProjectTemplate(project, isOdd) {
             <div class="project-details">
                 <span class="project-headline">${project.headline}</span>
                 <span class="project-subhead">${project.subhead}</span>
-                <p>${project.description}</p>
+                <p>${description}</p>
                 <div class="button-area">
                     ${project.liveUrl && project.liveUrl.trim() !== '' ? `
                         <a href="${project.liveUrl}" target="_blank"><button>Live</button></a>

@@ -12,7 +12,9 @@ let currentLang = localStorage.getItem('lang') || 'en';
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
+    renderPortfolio();
     updatePageTranslations();
+    setActiveLanguage();
 }
 
 
@@ -24,7 +26,10 @@ function updatePageTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[currentLang] && translations[currentLang][key]) {
-            element.textContent = translations[currentLang][key];
+            element.innerHTML = translations[currentLang][key];
+            if (element.hasAttribute('data-text')) {
+                element.setAttribute('data-text', translations[currentLang][key]);
+            }
         }
     });
     
