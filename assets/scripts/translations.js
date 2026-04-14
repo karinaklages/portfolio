@@ -10,6 +10,26 @@ const translations = {
     about_location: "Located in Apelern, Niedersachen",
     about_remote: "Available for remote work",
     about_button: "Let's create",
+
+    // Skills
+    skills_text_1: "You don't see the skill you need?",
+    skills_text_2: "Please contact me.",
+    skills_text_3: "I'm always ready to learn!",
+
+    // Contact 
+    contact_subtitle: "Want to discuss a new project?",
+    contact_body: "Let's talk and make it happen.",
+    contact_name: "Your Name",
+    contact_email: "Your Email",
+    contact_message: "Your Message",
+    contact_information: "xx",
+    contact_button: "Send Message",
+
+    // Errors
+    error_name: "Name is required.",
+    error_email: "Email is required.",
+    error_message: "Message is empty.",
+    error_valid: "Please accept the Privacy Policy",
     
     // Footer
     footer_privacy_policy: "Privacy Policy",
@@ -21,11 +41,31 @@ const translations = {
     hero_scroll_2: "Runter",
 
     // About Me
-    about_text_1: "Meine Erfahrungen als Designer und Entwickler ermöglichen mir eine einzigartige Perspektive: Ich denke sowohl kreativ als auch technisch und verbinde beide Ansätze, um smarte, ästhetische Weblösungen zu entwickeln. Ich liebe es, neue Fähigkeiten zu erlernen und intuitive, barrierefreie Erfahrungen zu schaffen, die funktionieren.",
-    about_text_2: "Mit einem Diplom in Kommunikationsdesign und meinen Kenntnissen in der Frontend-Entwicklung freue ich mich darauf, euer Team zu unterstützen. Mein Ziel sind ganzheitliche und aussagekräftige Designlösungen, die nachhaltigen Mehrwert bieten.",
+    about_text_1: "Meine Erfahrungen als Designer und Entwickler ermöglichen mir eine einzigartige Perspektive: Ich denke sowohl kreativ als auch technisch und verbinde beide Ansätze, um smarte, ästhetische Weblösungen zu entwickeln. Ich liebe es, neue Fähigkeiten zu erlernen und intuitive, barrierefreie Erfahrungen zu schaffen.",
+    about_text_2: "Mit einem Diplom in Kommunikationsdesign und meinen Kenntnissen in der Frontend-Entwicklung freue ich mich darauf, euer Team zu unterstützen. Mein Ziel sind ganzheitliche und aussagekräftige Designlösungen, die Mehrwert bieten.",
     about_location: "Wohnhaft in Apelern, Niedersachen",
     about_remote: "Remote verfügbar",
     about_button: "Sag Hallo",
+
+    // Skills
+    skills_text_1: "Du benötigst etwas anderes?",
+    skills_text_2: "Bitte kontaktiere mich.",
+    skills_text_3: "Ich lerne gerne dazu!",
+
+    // Contact 
+    contact_subtitle: "Hast du eine Idee für ein Projekt?",
+    contact_body: "Lass uns gemeinsam kreativ werden.",
+    contact_name: "Dein Name",
+    contact_email: "Deine Email",
+    contact_message: "Deine Nachricht",
+    contact_information: "xx",
+    contact_button: "Absenden",
+
+    // Errors
+    error_name: "Name ist erforderlich.",
+    error_email: "Email ist erforderlich.",
+    error_message: "Nachricht darf nicht leer sein.",
+    error_valid: "Bitte der Datenschutzerklärung zustimmen.",
     
     // Footer
     footer_privacy_policy: "Datenschutzerklärung",

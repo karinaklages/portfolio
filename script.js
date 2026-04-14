@@ -167,7 +167,6 @@ function initializeProjectNavigation() {
 /**
  * Dynamically generates projectImages and currentIndex objects from the portfolioProjects array.
  * This creates a mapping of project IDs to their image arrays and initializes the current index for each project to 0.
- * 
  * @type {Object.<string, string[]>} projectImages - Maps project IDs to their respective image file names.
  * @type {Object.<string, number>} currentIndex - Maps project IDs to their current image index (initially 0).
  */
@@ -210,3 +209,55 @@ document.querySelectorAll('.scroll-down-left-arrow').forEach(function (arrow) {
         this.classList.add('moved');
     });
 });
+
+
+/**
+ * Validates a form field and updates the UI with feedback.
+ * Wraps the field, adds a status icon, and shows an error message if invalid.
+ * @param {string} id - The ID of the input or textarea element.
+ * @param {boolean} valid - Indicates whether the field value is valid.
+ * @returns {boolean} Returns the validation result.
+ */
+function validateField(id, valid) {
+    const field = document.getElementById(id);
+    removeFieldFeedback(id);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'field-wrapper';
+    wrapper.dataset.field = id;
+    field.before(wrapper);
+    wrapper.append(field);
+    const icon = document.createElement('span');
+    icon.className = 'field-icon';
+    icon.innerHTML = valid ? iconValid() : iconInvalid();
+    wrapper.append(icon);
+    if (!valid) {
+        const error = document.createElement('p');
+        error.className = 'field-error';
+        error.dataset.error = id;
+        error.textContent = translations[currentLang][`error_${id}`];
+        wrapper.after(error);
+    }
+    return valid;
+}
+
+
+/**
+ * Validates the privacy policy checkbox and displays an error message if it is not checked.
+ * Removes any existing error message before re-validation.
+ * @returns {boolean} Returns true if the checkbox is checked, otherwise false.
+ */
+function validateCheckbox() {
+    const checkbox = document.getElementById('privacy');
+    const existing = document.querySelector('[data-error="privacy"]');
+    if (existing) existing.remove();
+    if (!checkbox.checked) {
+        const error = document.createElement('p');
+        error.classList.add('field-error');
+        error.dataset.error = 'privacy';
+        error.textContent = translations[currentLang].error_valid;
+        checkbox.closest('.form-checkbox-label')
+            .insertAdjacentElement('afterend', error);
+        return false;
+    }
+    return true;
+}
