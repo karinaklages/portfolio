@@ -1,18 +1,4 @@
 /**
- * Renders the entire portfolio section with all projects.
- */
-function renderPortfolio() {
-    const container = document.getElementById('portfolioContainer');
-    container.innerHTML = '';
-    portfolioProjects.forEach((project, index) => {
-        const isOdd = index % 2 === 0;
-        container.innerHTML += renderProjectTemplate(project, isOdd);
-    });
-    initializeProjectNavigation();
-}
-
-
-/**
  * Generates the HTML template for a single project.
  * @param {Object} project - The project data object.
  * @param {boolean} isOdd - Whether this project should use odd layout (true) or even layout (false).
@@ -60,17 +46,4 @@ function renderProjectTemplate(project, isOdd) {
     } else {
         return `<div class="project-wrapper-even">${detailsSection}${imageSection}</div>`;
     }
-}
-
-
-/**
- * Initializes click event listeners for project navigation buttons.
- * Must be called after portfolio is rendered.
- */
-function initializeProjectNavigation() {
-    document.querySelectorAll(".project-navigation").forEach(btn => {
-        btn.addEventListener("click", () => {
-            changeImage(btn.dataset.project, parseInt(btn.dataset.dir));
-        });
-    });
 }

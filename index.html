@@ -34,7 +34,10 @@
                         <img src="./assets/icons/arrow-down.svg" alt="Arrow Down Icon">
                     </a>
                 </div>
-                <span class="scroll-text">Scroll<br>Down</span>
+                <span class="scroll-text" data-i18n="hero_scroll">
+                    <span data-i18n="hero_scroll_1">Scroll</span><br>
+                    <span data-i18n="hero_scroll_2">Down</span>
+                </span>
             </div>
         </section>
         <section class="about-me-headline section-area" id="about">
@@ -42,17 +45,20 @@
         </section>
         <section class="about-me section-area">
             <div class="about-left">
-                <p>My journey from designer to developer gives me a unique perspective: I understand both the creative vision and the technical requirements needed to bring artsy and smart web solutions to life. I enjoy learning new skills and developing user-friendly solutions that are accessible and intuitive to use.<br><br>With a diploma in communication design and my skills in frontend development, I am excited to support your team. I pursue holistic and meaningful design that creates lasting value.<br><br></p>
+                <p data-i18n="about_text_1">My journey from designer to developer gives me a unique perspective: I understand both the creative vision and the technical requirements needed to bring artsy and smart web solutions to life. I enjoy learning new skills and developing user-friendly solutions that are accessible and intuitive to use.</p>
+                <br>
+                <p data-i18n="about_text_2">With a diploma in communication design and my skills in frontend development, I am excited to support your team. I pursue holistic and meaningful design that creates lasting value.</p>
+                <br><br>
                 <div class="about-information">
                     <img src="./assets/icons/location.svg" alt="Location Icon">
-                    <p>Located in Apelern, Niedersachen</p>
+                    <p data-i18n="about_location">Located in Apelern, Niedersachen</p>
                 </div>
                 <div class="about-information">
                     <img src="./assets/icons/remote.svg" alt="Remote Work Icon">
-                    <p>Available for remote work</p>
+                    <p data-i18n="about_remote">Available for remote work</p>
                 </div>
                 <div class="button-container">
-                    <a href="#contact"><button>Let's create</button></a>
+                    <a href="#contact"><button data-i18n="about_button">Let's create</button></a>
                 </div>
             </div>
             <div class="about-right">
@@ -115,7 +121,9 @@
     <script src="./assets/scripts/portfolio-template.js"></script>
     <script src="./assets/scripts/contact-template.js"></script>
     <script src="./assets/scripts/footer-template.js"></script>
-    <script src="./assets/scripts/header-render.js"></script>
+    <script src="./assets/scripts/translations.js"></script>
+    <script src="./assets/scripts/i18n.js"></script>
+    <script src="./assets/scripts/header.js"></script>
     <script src="./assets/scripts/form-validation.js"></script>
     <script src="script.js"></script>
 </body>

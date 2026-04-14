@@ -112,6 +112,22 @@ document.addEventListener('mousemove', (e) => {
 function renderSkills() {
     const grid = document.getElementById('skillsGrid');
     grid.innerHTML = renderSkillsTemplate();
+    updatePageTranslations();
+}
+
+
+/**
+ * Renders the entire portfolio section with all projects.
+ */
+function renderPortfolio() {
+    const container = document.getElementById('portfolioContainer');
+    container.innerHTML = '';
+    portfolioProjects.forEach((project, index) => {
+        const isOdd = index % 2 === 0;
+        container.innerHTML += renderProjectTemplate(project, isOdd);
+    });
+    initializeProjectNavigation();
+    updatePageTranslations();
 }
 
 
@@ -121,6 +137,7 @@ function renderSkills() {
 function renderContact() {
     const footer = document.getElementById('footer');
     footer.insertAdjacentHTML('afterbegin', renderContactTemplate());
+    updatePageTranslations();
 }
 
 
@@ -130,6 +147,20 @@ function renderContact() {
 function renderFooter() {
     const footer = document.getElementById('footer');
     footer.insertAdjacentHTML('beforeend', renderFooterTemplate());
+    updatePageTranslations();
+}
+
+
+/**
+ * Initializes click event listeners for project navigation buttons.
+ * Must be called after portfolio is rendered.
+ */
+function initializeProjectNavigation() {
+    document.querySelectorAll(".project-navigation").forEach(btn => {
+        btn.addEventListener("click", () => {
+            changeImage(btn.dataset.project, parseInt(btn.dataset.dir));
+        });
+    });
 }
 
 
@@ -144,6 +175,20 @@ portfolioProjects.forEach(project => {
     projectImages[project.id] = project.images;
     currentIndex[project.id] = 0;
 });
+
+
+/**
+ * Changes the displayed image for a project based on navigation direction.
+ * @param {string} projectId - The ID of the project.
+ * @param {number} direction - The direction to move in the image array (1 or -1).
+ */
+function changeImage(projectId, direction) {
+    const images = projectImages[projectId];
+    currentIndex[projectId] = (currentIndex[projectId] + direction + images.length) % images.length;
+    
+    const img = document.querySelector(`#${projectId} img`);
+    img.src = `./assets/img/${images[currentIndex[projectId]]}`;
+}
 
 
 /**
@@ -165,17 +210,3 @@ document.querySelectorAll('.scroll-down-left-arrow').forEach(function (arrow) {
         this.classList.add('moved');
     });
 });
-
-
-/**
- * Changes the displayed image for a project based on navigation direction.
- * @param {string} projectId - The ID of the project.
- * @param {number} direction - The direction to move in the image array (1 or -1).
- */
-function changeImage(projectId, direction) {
-    const images = projectImages[projectId];
-    currentIndex[projectId] = (currentIndex[projectId] + direction + images.length) % images.length;
-    
-    const img = document.querySelector(`#${projectId} img`);
-    img.src = `./assets/img/${images[currentIndex[projectId]]}`;
-}

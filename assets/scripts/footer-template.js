@@ -30,8 +30,8 @@ function renderFooterTemplate () {
                     </a>
                 </div>
                 <div class="link-area">
-                    <a class="footer-links" href="privacy-policy.html" data-text="Privacy Policy">Privacy Policy</a>
-                    <a class="footer-links" href="legal-notice.html" data-text="Legal Notice">Legal Notice</a>
+                    <a class="footer-links" data-i18n="footer_privacy_policy" href="privacy-policy.html" data-text="Privacy Policy">Privacy Policy</a>
+                    <a class="footer-links" data-i18n="footer_legal_notice" href="legal-notice.html" data-text="Legal Notice">Legal Notice</a>
                 </div>
                 <p class="copywrite d-none">© Karina Klages 2026</p>
             </div>

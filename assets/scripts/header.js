@@ -6,6 +6,7 @@ function renderHeader() {
     setLanguages();
     setBurgerMenu();
     setMenuLinks();
+    updatePageTranslations();
 }
 
 
@@ -15,13 +16,14 @@ function renderHeader() {
  */
 function setLanguages() {
     document.getElementById('languageEn').addEventListener('click', () => {
-        localStorage.setItem('lang', 'en');
+        setLanguage('en');
         setActiveLanguage();
     });
     document.getElementById('languageDe').addEventListener('click', () => {
-        localStorage.setItem('lang', 'de');
+        setLanguage('de');
         setActiveLanguage();
     });
+    setActiveLanguage();
 }
 
 
@@ -29,7 +31,7 @@ function setLanguages() {
  * Updates the active state of the language buttons.
  */
 function setActiveLanguage() {
-    const currentLang = localStorage.getItem('lang') || 'en';
+    const currentLang = getCurrentLanguage();
     document.getElementById('languageEn').classList.toggle('active', currentLang === 'en');
     document.getElementById('languageDe').classList.toggle('active', currentLang === 'de');
 }
