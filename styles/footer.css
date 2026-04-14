@@ -90,8 +90,8 @@ footer {
     content: '';
     position: absolute;
     bottom: -6px;
-    left: 33%;
-    width: 50%;
+    right: 20px;
+    width: 45%;
     height: 2.5px;
     background-color: var(--farbe-lilac);
     transform: scaleX(0);

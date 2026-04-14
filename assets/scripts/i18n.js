@@ -9,12 +9,24 @@ let currentLang = localStorage.getItem('lang') || 'en';
  * Sets the current language and updates all translatable elements on the page.
  * @param {string} lang - Language code ('en' or 'de').
  */
+// function setLanguage(lang) {
+//     currentLang = lang;
+//     localStorage.setItem('lang', lang);
+//     renderPortfolio();
+//     updatePageTranslations();
+//     setActiveLanguage();
+// }
+
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
-    renderPortfolio();
+    if (typeof renderPortfolio === 'function') {
+        renderPortfolio();
+    }
     updatePageTranslations();
-    setActiveLanguage();
+    if (typeof setActiveLanguage === 'function') {
+        setActiveLanguage();
+    }
 }
 
 

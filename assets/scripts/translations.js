@@ -40,7 +40,6 @@ const translations = {
     error_valid: "Please accept the Privacy Policy",
     error_text: "I've read the <a href=\"privacy-policy.html\" class=\"form-privacy-link inline-link\">Privacy Policy</a> and agree to the processing of my data.",
 
-    
     // Footer
     footer_privacy_policy: "Privacy Policy",
     footer_legal_notice: "Legal Notice"
