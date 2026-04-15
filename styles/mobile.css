@@ -250,6 +250,12 @@
         gap: 30px 22px;
     }
 
+    .skills-information {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .skills-information p {
         text-align: center;
     }
@@ -290,6 +296,11 @@
     /* References and Portfolio Section */
     .section-subhead {
         font-size: 20px;
+    }
+
+    /* References  */
+    .references h2 {
+        margin-top: 0px;
     }
 
     /* Toggle Menu */
