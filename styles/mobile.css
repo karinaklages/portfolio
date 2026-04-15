@@ -11,8 +11,8 @@
     .hero-section {
         --hero-font-size: clamp(2rem, 8vw, 10rem);
         position: relative;
-        padding-left: 30px;   /* Mindestabstand zum Rand */
-        padding-right: 30px;  /* Mindestabstand zum Rand */
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .hero-section h1 {
