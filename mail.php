@@ -1,6 +1,6 @@
 <?php
 
-$siteEmail = "karina.klages@web.de";
+$siteEmail = "mail@karina-klages.de";
 
 switch ($_SERVER['REQUEST_METHOD']) {
 

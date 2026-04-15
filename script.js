@@ -266,3 +266,32 @@ function validateCheckbox() {
     }
     return true;
 }
+
+
+/**
+ * Initializes the contact form submission handler after the page has fully loaded.
+ * This script attaches a submit event listener to the contact form and sends the form data (name, email, message) to a remote PHP endpoint using a JSON-based POST request via the Fetch API.
+ * The default form submission is prevented to avoid page reload.
+ * The server response is expected to be JSON and is logged to the console.
+ * @listens window#load
+ */
+window.addEventListener("load", () => {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch("https://karina-klages.de/mail.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        message: document.querySelector("#message").value
+      })
+    })
+    .then(r => r.json())
+    .then(data => console.log(data));
+  });
+});
