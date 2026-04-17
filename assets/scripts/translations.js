@@ -138,7 +138,7 @@ const translations = {
     privacy_source: "Source: e-recht24.de",
 
     // Toast Message
-    toast_message: "The email has been sent."
+    toast_message: "The message has been sent."
   },
   de: {
     // Hero
@@ -279,6 +279,6 @@ const translations = {
     privacy_source: "Quelle: e-recht24.de",
 
     // Toast Message
-    toast_message: "Die Email wurde versendet.",
+    toast_message: "Die Nachricht wurde gesendet.",
   }
 };

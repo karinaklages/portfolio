@@ -490,8 +490,9 @@
 
     /* Toast Message  */
     .toast-message {
-        width: 295px;
-        min-width: 295px;
+        font-size: 19px;
+        width: 310px;
+        min-width: 310px;
         height: 80px;
     }
 }

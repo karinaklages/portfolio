@@ -295,8 +295,12 @@ function handleSubmitResponse(data, form) {
     if (data.success) {
         const toast = document.querySelector('.toast-message');
         if (toast) {
+            toast.style.display = 'flex';
             toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3000);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.style.display = 'none';
+            }, 3000);
         }
         clearForm();
     } else {
