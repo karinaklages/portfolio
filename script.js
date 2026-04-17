@@ -96,6 +96,7 @@ function init() {
     renderFooter();
     setActiveLanguage();
     initFormValidation();
+    initContactForm();
 }
 
 window.onload = init;
@@ -269,29 +270,79 @@ function validateCheckbox() {
 
 
 /**
- * Initializes the contact form submission handler after the page has fully loaded.
- * This script attaches a submit event listener to the contact form and sends the form data (name, email, message) to a remote PHP endpoint using a JSON-based POST request via the Fetch API.
- * The default form submission is prevented to avoid page reload.
- * The server response is expected to be JSON and is logged to the console.
+ * Initializes the contact form behavior.
+ * Attaches a submit event listener to the form with the ID "contactForm".
+ * On submit, it prevents the default form submission, displays a toast message for a few seconds, and then resets the form fields.
+ */
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    const toast = document.querySelector('.toast-message');
+    if (!form || !toast) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+        form.reset();
+    });
+}
+
+
+/**
+ * Sends form data to the PHP mail endpoint.
+ * @param {Object} formData - The form data containing name, email, and message.
+ * @returns {Promise<Object>} The parsed JSON response from the server.
+ */
+function sendFormData(formData) {
+    return fetch("/mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    })
+    .then(r => r.json());
+}
+
+
+/**
+ * Handles the server response after form submission.
+ * Shows a toast message on success or logs an error on failure.
+ * @param {Object} data - The server response object.
+ * @param {boolean} data.success - Whether the email was sent successfully.
+ * @param {string} [data.error] - Error message returned by the server.
+ * @param {HTMLFormElement} form - The contact form element to reset on success.
+ */
+function handleSubmitResponse(data, form) {
+    if (data.success) {
+        const toast = document.querySelector('.toast-message');
+        if (toast) {
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+        form.reset();
+    } else {
+        console.error('Fehler:', data.error);
+    }
+}
+
+
+/**
+ * Initializes the contact form submit handler after the page has loaded.
+ * Collects form field values, sends them via fetch, and handles the response.
  * @listens window#load
  */
 window.addEventListener("load", () => {
-  const form = document.getElementById("contactForm");
-  if (!form) return;
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    fetch("https://karina-klages.de/mail.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: document.querySelector("#name").value,
-        email: document.querySelector("#email").value,
-        message: document.querySelector("#message").value
-      })
-    })
-    .then(r => r.json())
-    .then(data => console.log(data));
-  });
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const formData = {
+            name: document.querySelector("#name").value,
+            email: document.querySelector("#email").value,
+            message: document.querySelector("#message").value
+        };
+        sendFormData(formData)
+            .then(data => handleSubmitResponse(data, form))
+            .catch(err => console.error('Netzwerkfehler:', err));
+    });
 });

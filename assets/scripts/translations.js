@@ -136,6 +136,9 @@ const translations = {
     privacy_github_title: "GitHub",
     privacy_github_text: "This website uses features provided by GitHub. The provider is GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Every time you access a page that contains GitHub features, a connection is established with GitHub's servers. GitHub is informed that you have visited this website using your IP address. If you click the GitHub \"Star\" button while logged into your GitHub account, GitHub can associate your visit to this website with you and your user account. Data processing is based on Article 6(1)(f) of the GDPR. The website operator has a legitimate interest in achieving the widest possible visibility on social media. If consent has been obtained, processing is based exclusively on Article 6(1)(a) of the GDPR; consent may be withdrawn at any time. Data transfers to the U.S. are based on the EU Commission's Standard Contractual Clauses. Details can be found here: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement. Further information on this can be found in GitHub's Privacy Policy at: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement",
     privacy_source: "Source: e-recht24.de",
+
+    // Toast Message
+    toast_message: "The email has been sent."
   },
   de: {
     // Hero
@@ -274,5 +277,8 @@ const translations = {
     privacy_github_title: "GitHub",
     privacy_github_text: "Diese Website nutzt Funktionen des Dienstes GitHub. Anbieter ist die GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Bei jedem Abruf einer Seite dieser Website, die Funktionen von GitHub enthält, wird eine Verbindung zu Servern von GitHub aufgebaut. GitHub wird darüber informiert, dass Sie diese Internetseiten mit Ihrer IP-Adresse besucht haben. Wenn Sie den GitHub \"Star-Button\" anklicken und in Ihrem Account bei GitHub eingeloggt sind, ist es GitHub möglich, Ihren Besuch auf dieser Website Ihnen und Ihrem Benutzerkonto zuzuordnen. Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an einer möglichst umfangreichen Sichtbarkeit in den sozialen Medien. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar. Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement. Weitere Informationen hierzu finden Sie in der GitHub Datenschutzerklärung unter: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement",
     privacy_source: "Quelle: e-recht24.de",
+
+    // Toast Message
+    toast_message: "Die Email wurde versendet.",
   }
 };

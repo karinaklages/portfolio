@@ -202,7 +202,7 @@ button:active {
     }
 }
 
-/* Sections  */
+/* Sections */
 
 main {
     flex: 1;
@@ -273,4 +273,52 @@ main {
 
 .scroll-down-right-arrow:hover img {
     transform: translate(50px, 50px);
+}
+
+/* Toast Message */
+
+.toast-message {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    bottom: 40px;
+    background-color: var(--farbe-cream);
+    font-family: 'Overpass';
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--farbe-black);
+    text-align: center;
+    white-space: nowrap;
+    padding: 20px 30px;
+    z-index: 9999;
+    width: 350px;
+    min-width: 350px;
+    height: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.toast-message::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.toast-message.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast-message.show::before {
+    opacity: 1;
 }
