@@ -24,11 +24,12 @@ footer {
 
 .social-media-icon img {
     width: 40px;
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 
 .social-media-icon img:hover {
     transform: translateY(-15px);
-    transition: transform 0.3s ease;
 }
 
 .link-area {
