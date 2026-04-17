@@ -31,7 +31,7 @@ const portfolioProjects = [
         subhead: 'HTML | CSS | JavaScript | Git | Firebase',
         description: 'The web app "Join" was built using HTML, CSS, JavaScript, Git and Firebase, in collaboration with three other team partners. The app serves as a project management tool that visualises the status and responsibilities of tasks.',
         description_de: 'Die Web-App "Join" wurde in Zusammenarbeit mit drei weiteren Teammitgliedern unter Verwendung von HTML, CSS, JavaScript, Git und Firebase entwickelt – als ein Projektmanagement-Tool für Aufgaben.',
-        liveUrl: 'https://karina-klages.developerakademie.net/join/index.html',
+        liveUrl: 'https://join.karina-klages.de/',
         githubUrl: 'https://github.com/karinaklages/join',
         images: ['join-1.jpg', 'join-2.jpg', 'join-3.jpg', 'join-4.jpg', 'join-5.jpg']
     },
@@ -42,7 +42,7 @@ const portfolioProjects = [
         subhead: 'HTML | CSS | JavaScript | Git',
         description: 'The platformer "Roots & Dust" was developed using JavaScript and object-oriented programming. Please click the live view to help Brave Viking defeat the Dark Knight!',
         description_de: 'Das Jump and Run Spiel „Roots & Dust“ wurde mit JavaScript und unter Verwendung objektorientierter Programmierung entwickelt. Hilf dem tapferen Wikinger den dunklen Ritter zu besiegen.',
-        liveUrl: 'https://karina-klages.developerakademie.net/platformer-game/index.html',
+        liveUrl: 'https://platformer.karina-klages.de/',
         githubUrl: 'https://github.com/karinaklages/platformer-game',
         images: ['platformer-1.jpg', 'platformer-2.jpg', 'platformer-3.jpg']
     },
@@ -53,7 +53,7 @@ const portfolioProjects = [
         subhead: 'HTML | CSS | JavaScript | Git | Rest-API',
         description: 'In this project, a Pokémon trainer registry was developed based on the official PokéAPI. The goal was to make systems and data retrieval compatible. Try to find your favorite Pokémon.',
         description_de: 'Im Rahmen dieses Projekts wurde auf Basis der offiziellen PokéAPI ein Pokémon-Trainer-Register entwickelt. Ziel war es, die Systeme und den Datenabruf kompatibel zu gestalten.',
-        liveUrl: 'https://karina-klages.developerakademie.net/pokedex/index.html',
+        liveUrl: 'https://pokedex.karina-klages.de/',
         githubUrl: 'https://github.com/karinaklages/pokedex',
         images: ['pokedex-1.jpg', 'pokedex-2.jpg', 'pokedex-3.jpg', 'pokedex-4.jpg', 'pokedex-5.jpg']
     },
