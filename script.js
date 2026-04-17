@@ -294,24 +294,13 @@ function initContactForm() {
  * @param {Object} formData - The form data containing name, email, and message.
  * @returns {Promise<Object>} The parsed JSON response from the server.
  */
-// function sendFormData(formData) {
-//     return fetch("/mail.php", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(formData)
-//     })
-//     .then(r => r.json());
-// }
 function sendFormData(formData) {
     return fetch("/mail.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
     })
-    .then(r => {
-        console.log("Status:", r.status, r.url); // ← zeigt ob Redirect passiert
-        return r.json();
-    });
+    .then(r => r.json());
 }
 
 

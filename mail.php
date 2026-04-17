@@ -1,8 +1,5 @@
 <?php
 
-error_log("Method: " . $_SERVER['REQUEST_METHOD']);
-error_log("Input: " . file_get_contents('php://input'));
-
 $allowedOrigins = [
     'https://karina-klages.de',
     'https://www.karina-klages.de'
