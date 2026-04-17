@@ -96,7 +96,7 @@ function init() {
     renderFooter();
     setActiveLanguage();
     initFormValidation();
-    initContactForm();
+    initContactFormSubmit();
 }
 
 window.onload = init;
@@ -190,7 +190,6 @@ portfolioProjects.forEach(project => {
 function changeImage(projectId, direction) {
     const images = projectImages[projectId];
     currentIndex[projectId] = (currentIndex[projectId] + direction + images.length) % images.length;
-    
     const img = document.querySelector(`#${projectId} img`);
     img.src = `./assets/img/${images[currentIndex[projectId]]}`;
 }
@@ -270,26 +269,6 @@ function validateCheckbox() {
 
 
 /**
- * Initializes the contact form behavior.
- * Attaches a submit event listener to the form with the ID "contactForm".
- * On submit, it prevents the default form submission, displays a toast message for a few seconds, and then resets the form fields.
- */
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    const toast = document.querySelector('.toast-message');
-    if (!form || !toast) return;
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
-        form.reset();
-    });
-}
-
-
-/**
  * Sends form data to the PHP mail endpoint.
  * @param {Object} formData - The form data containing name, email, and message.
  * @returns {Promise<Object>} The parsed JSON response from the server.
@@ -319,7 +298,7 @@ function handleSubmitResponse(data, form) {
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 3000);
         }
-        form.reset();
+        clearForm();
     } else {
         console.error('Fehler:', data.error);
     }
@@ -327,22 +306,24 @@ function handleSubmitResponse(data, form) {
 
 
 /**
- * Initializes the contact form submit handler after the page has loaded.
- * Collects form field values, sends them via fetch, and handles the response.
- * @listens window#load
+ * Initializes the contact form submit handler.
+ * Prevents default form submission, validates fields, and sends form data via AJAX if valid. Shows feedback and clears form on success.
  */
-window.addEventListener("load", () => {
+function initContactFormSubmit() {
     const form = document.getElementById("contactForm");
     if (!form) return;
     form.addEventListener("submit", function(e) {
         e.preventDefault();
+        if (typeof validateForm === 'function' && !validateForm()) {
+            return;
+        }
         const formData = {
-            name: document.querySelector("#name").value,
-            email: document.querySelector("#email").value,
-            message: document.querySelector("#message").value
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
         };
         sendFormData(formData)
             .then(data => handleSubmitResponse(data, form))
             .catch(err => console.error('Netzwerkfehler:', err));
     });
-});
+}

@@ -5,10 +5,9 @@
 function initFormValidation() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
-    const submitBtn = form.querySelector('.form-submit');
-    submitBtn.addEventListener('click', () => {
-        if (validateForm()) {
-            clearForm();
+    form.addEventListener('submit', function(e) {
+        if (!validateForm()) {
+            e.preventDefault();
         }
     });
 }
@@ -19,8 +18,8 @@ function initFormValidation() {
  * @returns {boolean} True if all fields are valid, false otherwise.
  */
 function validateForm() {
-    const nameValid    = validateField('name', document.getElementById('name').value.trim() !== '');
-    const emailValid   = validateField('email', isValidEmail(document.getElementById('email').value.trim()));
+    const nameValid = validateField('name', document.getElementById('name').value.trim() !== '');
+    const emailValid = validateField('email', isValidEmail(document.getElementById('email').value.trim()));
     const messageValid = validateField('message', document.getElementById('message').value.trim() !== '');
     const privacyValid = validateCheckbox();
     return nameValid && emailValid && messageValid && privacyValid;
@@ -101,8 +100,6 @@ function clearForm() {
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
     document.getElementById('privacy').checked = false;
-    
-    // Remove all validation feedback
     removeFieldFeedback('name');
     removeFieldFeedback('email');
     removeFieldFeedback('message');
