@@ -14,6 +14,45 @@ function initFormValidation() {
 
 
 /**
+ * Evaluates whether all required contact form fields are filled and valid, then enables or disables the submit button accordingly.
+ */
+function updateSubmitState() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const submitBtn = document.querySelector('.contact-form button[type="submit"]');
+    submitBtn.disabled = !(name !== '' && isValidEmail(email) && message !== '');
+}
+
+
+/**
+ * Initializes live validation for all contact form fields.
+ * On each keystroke, removes existing error feedback if the field value becomes valid, and updates the submit button state.
+ * Also listens for changes on the privacy checkbox.
+ */
+function initLiveValidation() {
+    const fields = ['name', 'email', 'message'];
+    fields.forEach(id => {
+        const field = document.getElementById(id);
+        if (!field) return;
+        field.addEventListener('input', () => {
+            const isValid = id === 'email' ? isValidEmail(field.value.trim()) : field.value.trim() !== '';
+            if (isValid) {
+                const error = document.querySelector(`[data-error="${id}"]`);
+                if (error) error.remove();
+                const icon = document.querySelector(`[data-field="${id}"] .field-icon`);
+                if (icon) icon.innerHTML = '';
+            }
+            updateSubmitState();
+        });
+    });
+    const privacy = document.getElementById('privacy');
+    if (privacy) { privacy.addEventListener('change', () => validateCheckbox()); }
+    updateSubmitState();
+}
+
+
+/**
  * Validates all form fields and shows or hides error/success indicators.
  * @returns {boolean} True if all fields are valid, false otherwise.
  */

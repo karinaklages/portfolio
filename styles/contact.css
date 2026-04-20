@@ -194,3 +194,8 @@
     background-color: var(--farbe-cream);
     border: solid 4px var(--farbe-cream);
 }
+
+.contact-form button[type="submit"]:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}

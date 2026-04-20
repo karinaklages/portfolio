@@ -1,3 +1,7 @@
+* {
+    touch-action: manipulation;
+}
+
 :root {
     --farbe-black: #000000;
     --farbe-white: #ffffff;

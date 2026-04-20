@@ -97,6 +97,8 @@ function init() {
     setActiveLanguage();
     initFormValidation();
     initContactFormSubmit();
+    initLiveValidation();
+    preloadImages();
 }
 
 window.onload = init;
@@ -158,13 +160,29 @@ function renderFooter() {
 
 
 /**
+ * Preloads all portfolio project images into the browser cache.
+ * Prevents visible loading delays when navigating between project images.
+ */
+function preloadImages() {
+    portfolioProjects.forEach(project => {
+        project.images.forEach(imgName => {
+            const img = new Image();
+            img.src = `./assets/img/${imgName}`;
+        });
+    });
+}
+
+
+/**
  * Initializes click event listeners for project navigation buttons.
  * Must be called after portfolio is rendered.
  */
 function initializeProjectNavigation() {
     document.querySelectorAll(".project-navigation").forEach(btn => {
-        btn.addEventListener("click", () => {
-            changeImage(btn.dataset.project, parseInt(btn.dataset.dir));
+        const newBtn = btn.cloneNode(true);
+        btn.replaceWith(newBtn);
+        newBtn.addEventListener("click", () => {
+            changeImage(newBtn.dataset.project, parseInt(newBtn.dataset.dir));
         });
     });
 }
