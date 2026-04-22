@@ -10,6 +10,8 @@
 .references-container {
     padding: 42px 26px;
     border: 4px solid var(--farbe-black);
+    width: 50%;
+    box-sizing: border-box;
 }
 
 .reference-head {
