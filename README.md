@@ -12,3 +12,11 @@ This portfolio is part of the Developer Akademie's training programme for softwa
 [Live View](https://karina-klages.de)</p>
 
 ###
+
+![Portfolio](./assets/img/join-1.jpg)<br>
+
+![Portfolio](./assets/img/join-2.jpg)<br>
+
+![Portfolio](./assets/img/join-3.jpg)<br>
+
+![Portfolio](./assets/img/join-4.jpg)
