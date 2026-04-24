@@ -9,4 +9,6 @@ My technical expertise is built on a solid foundation of hands-on experience and
 This portfolio is part of the Developer Akademie's training programme for software developers (www.developerakademie.com). 
 <br><br>
 
+[Live View](https://karina-klages.de)</p>
+
 ###
