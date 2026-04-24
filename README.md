@@ -13,10 +13,10 @@ This portfolio is part of the Developer Akademie's training programme for softwa
 
 ###
 
-![Portfolio](./assets/img/join-1.jpg)<br>
+![Portfolio](./assets/img/portfolio-1.jpg)<br>
 
-![Portfolio](./assets/img/join-2.jpg)<br>
+![Portfolio](./assets/img/portfolio-2.jpg)<br>
 
-![Portfolio](./assets/img/join-3.jpg)<br>
+![Portfolio](./assets/img/portfolio-3.jpg)<br>
 
-![Portfolio](./assets/img/join-4.jpg)
+![Portfolio](./assets/img/portfolio-4.jpg)
